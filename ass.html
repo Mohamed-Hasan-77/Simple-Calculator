@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" type="image" href="4341087.png">
+    <style>
+        body{
+            height: 100vh;
+            background-image: linear-gradient(to right,rgb(6, 113, 212),rgb(145, 192, 236), rgb(152, 228, 122),rgb(104, 199, 66));
+            display: grid;
+            place-items: center;
+        }
+        .calc{
+            box-shadow: 0px 0px 11px -5px black;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+            grid-template-columns: repeat(4, 100px);
+        }
+        .screen {
+            grid-column: 1 / span 4;
+            background-color: rgba(15, 15, 15, 0.705);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            flex-direction: column;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        .span-two {
+            grid-column:  span 2;
+        }
+        .calc button {
+            background-color: rgb(255, 255, 255, .75);
+            cursor: pointer;
+            font-size: 2rem;
+            border: 1px solid white;
+            outline: none;
+        }
+        .calc button:hover {
+            background-color: rgb(255, 255, 255, .9);
+
+        }
+        .calc .top {
+            color: rgb(255, 255, 255, .75);
+            font-size: 1.5rem;
+        }
+        .calc .bottom {
+            color: white;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div class="screen">
+            <div data-top class="top"></div>
+            <div data-bottom class="bottom"></div>
+        </div>
+        <button class="span-two" data-clear>AC</button>
+        <button data-delete >DEL</button>
+        <button data-operation>/</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button class="span-two" data-equals>=</button>
+    </div>
+    <script src="ass.js"></script>
+</body>
+</html>
